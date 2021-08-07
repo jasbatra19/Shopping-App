@@ -4,12 +4,14 @@ import 'package:shoppingapp/Feedbackpage/feedback.dart';
 import 'package:shoppingapp/addtocart/addToCartEyewear.dart';
 import 'package:shoppingapp/addtocart/addToCartPurse.dart';
 import 'package:shoppingapp/addtocart/addToCartshoes.dart';
-import 'package:shoppingapp/login/login.dart';
+
 import 'package:shoppingapp/screens/clothes.dart';
 import 'package:shoppingapp/screens/eyewear.dart';
 import 'package:shoppingapp/screens/footwear.dart';
 import 'package:shoppingapp/screens/handbags.dart';
 import 'package:shoppingapp/data/product.dart';
+import 'package:shoppingapp/screens/wrapper.dart';
+import 'package:shoppingapp/services/auth.dart';
 
 import '../addtocart/addToCartClothes.dart';
 import 'cart.dart';
@@ -24,6 +26,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -139,9 +142,10 @@ class _HomeState extends State<Home> {
                         "Log out",
                         style: TextStyle(fontSize: 15),
                       ),
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Login()));
+                      onTap: () async {
+                        await _auth.SignOut();
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => Wrapper()));
                       },
                     ),
                   ],

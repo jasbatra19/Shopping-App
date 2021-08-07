@@ -31,8 +31,8 @@ class _addToCartClothesState extends State<addToCartClothes> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Cart()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new Cart()));
               },
               icon: Icon(Icons.shopping_bag))
         ],
@@ -74,11 +74,12 @@ class _addToCartClothesState extends State<addToCartClothes> {
                       padding: EdgeInsets.all(10),
                       margin: EdgeInsets.all(10),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             " S",
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontFamily: "satisfy",
                                 fontWeight: FontWeight.bold),
                           ),
@@ -93,7 +94,7 @@ class _addToCartClothesState extends State<addToCartClothes> {
                           Text(
                             "M",
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontFamily: "satisfy",
                                 fontWeight: FontWeight.bold),
                           ),
@@ -108,7 +109,7 @@ class _addToCartClothesState extends State<addToCartClothes> {
                           Text(
                             "L",
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontFamily: "satisfy",
                                 fontWeight: FontWeight.bold),
                           ),
@@ -123,7 +124,7 @@ class _addToCartClothesState extends State<addToCartClothes> {
                           Text(
                             "XL",
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontFamily: "satisfy",
                                 fontWeight: FontWeight.bold),
                           ),
@@ -138,7 +139,7 @@ class _addToCartClothesState extends State<addToCartClothes> {
                           Text(
                             "XXL",
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontFamily: "satisfy",
                                 fontWeight: FontWeight.bold),
                           ),

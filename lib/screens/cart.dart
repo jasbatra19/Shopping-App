@@ -12,6 +12,7 @@ void getId(int id) {
 late int z;
 int _selectedIndex = 0;
 List showItem = [];
+
 List text = [];
 List image = [];
 List<int> price = [];
@@ -25,6 +26,7 @@ void push() {
   print(showItem.length);
 }
 
+// ignore: non_constant_identifier_names
 int Cost = 0;
 
 int pay(int c) {
@@ -65,6 +67,7 @@ class _CartState extends State<Cart> {
               onPressed: () {
                 setState(() {
                   showItem.clear();
+                  Cost = 0;
                 });
               },
               icon: Icon(Icons.clear))
@@ -84,25 +87,25 @@ class _CartState extends State<Cart> {
         onTap: _onItemTapped,
       ),
       body: showItem.length > 0
-          ? ListView.builder(
+          ? new ListView.builder(
               itemCount: showItem.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Dismissible(
+              itemBuilder: (BuildContext context, j) {
+                return new Dismissible(
                   key: UniqueKey(),
-                  child: Card(
+                  child: new Card(
                     elevation: 50,
                     color: Colors.teal.shade100,
-                    child: ListTile(
-                      title: Text(
-                        text[index],
+                    child: new ListTile(
+                      title: new Text(
+                        text[j],
                         style: TextStyle(
                             fontSize: 25,
                             fontStyle: FontStyle.normal,
                             fontWeight: FontWeight.w900),
                       ),
-                      leading: Image.asset(image[index]),
-                      subtitle: Text(
-                        "Rs.${price[index]}",
+                      leading: new Image.asset(image[j]),
+                      subtitle: new Text(
+                        "Rs.${price[j]}",
                         style: TextStyle(
                             fontSize: 25,
                             fontStyle: FontStyle.normal,
@@ -114,9 +117,13 @@ class _CartState extends State<Cart> {
                   direction: DismissDirection.endToStart,
                   onDismissed: (_) {
                     setState(() {
-                      Cost = Cost - price[index];
+                      Cost = Cost - price[j];
                       print(Cost);
-                      showItem.removeAt(index);
+                      if (Cost >= 0) {
+                        showItem.removeAt(j - 1);
+                      } else {
+                        Cost = 0;
+                      }
                     });
                   },
                 );

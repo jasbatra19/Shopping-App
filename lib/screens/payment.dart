@@ -45,6 +45,9 @@ class _PaymentState extends State<Payment> {
             Container(
               child: TextButton(
                   onPressed: () {
+                    showItem.clear();
+                    Cost = 0;
+
                     final snackBar = SnackBar(
                       content: const Text('Payment Successful'),
                       action: SnackBarAction(

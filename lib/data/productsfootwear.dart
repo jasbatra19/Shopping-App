@@ -25,6 +25,6 @@ List<Product> product = [
       Color(0xFF3D82AE)),
   Product("images/shoe7.jpg", "dummyText", "blurr blue", 31, 12, 5000,
       Color(0xFF3D82AE)),
-  Product("images/shoe8.jpg", "dummyText", "black blue", 8, 12, 3000,
+  Product("images/shoe8.jpg", "dummyText", "black blue", 9, 12, 3000,
       Color(0xFF3D82AE)),
 ];

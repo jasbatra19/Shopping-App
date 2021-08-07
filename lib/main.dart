@@ -1,11 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-import 'login/login.dart';
+import 'package:provider/provider.dart';
+import 'package:shoppingapp/screens/wrapper.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
+import 'package:shoppingapp/services/auth.dart';
+
+import 'package:shoppingapp/services/user.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -18,6 +24,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Login();
+    return StreamProvider<Myuser?>.value(
+      initialData: null,
+      value: AuthService().streamUser,
+      child: MaterialApp(
+        home: Wrapper(),
+      ),
+    );
   }
 }
