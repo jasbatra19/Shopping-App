@@ -1,7 +1,7 @@
 # shoppingapp
 
 A new Flutter project.
-
+<img src="(https://user-images.githubusercontent.com/74643530/177298987-02ae5130-f55f-426d-a1ac-93522a1a5771.png)" alt="Flutter" width=100 height=100>
 <img src="[https://your-image-url.type](https://user-images.githubusercontent.com/74643530/177298987-02ae5130-f55f-426d-a1ac-93522a1a5771.png)" width="300">
 ![Screenshot_1657013218](https://user-images.githubusercontent.com/74643530/177298987-02ae5130-f55f-426d-a1ac-93522a1a5771.png|width=100px)
 ![Screenshot_1657013216](https://user-images.githubusercontent.com/74643530/177298995-ec2a25cf-dd17-4499-93c8-b8057627a358.png|width=100)
