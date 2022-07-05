@@ -1,6 +1,8 @@
 # shoppingapp
 
 A new Flutter project.
+
+## The app is a prototype model of a shopping app 
 <img src="https://user-images.githubusercontent.com/74643530/177298987-02ae5130-f55f-426d-a1ac-93522a1a5771.png" alt="Screenshot1" width=400 height=500>
 <img src="https://user-images.githubusercontent.com/74643530/177298995-ec2a25cf-dd17-4499-93c8-b8057627a358.png" alt="Screenshot2" width=400 height=500>
 <img src="https://user-images.githubusercontent.com/74643530/177299006-fe6ee242-93f3-468b-aa8a-90fdec11c413.png" alt="Screenshot3" width=400 height=500>
